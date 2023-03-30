@@ -153,6 +153,9 @@ body{
     background-repeat: no-repeat;
     background-position:center;
 }
+.wc.lower{
+    margin-left: 150px;
+}
 .chair-column{
     display: flex;
     flex-wrap: wrap;
