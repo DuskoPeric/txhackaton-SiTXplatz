@@ -1,0 +1,96 @@
+body{
+    background: #142539;
+    padding: 20px;
+}
+.main-container{
+    width: 100%;
+    height: calc(100vh - 60px);
+    overflow: auto;
+}
+.map-holder{
+    width: 1200px;
+}
+.row{
+    display:flex;
+}
+.row.bottom{
+    display:flex;
+    align-items: flex-end;
+}
+.office{
+    background: #234e70;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.office.vertical{
+    align-items: center;
+    justify-content: center;
+}
+.office.horizontal{
+    align-items: center;
+    justify-content: space-around;
+}
+.office.vertical.big5{
+    height:200px;
+    width:190px;
+}
+.office.vertical.big4{
+    height:250px;
+    width:150px;
+}
+.office.horizontal.big3{
+    height:150px;
+    width:200px;
+}
+.office.horizontal.big2{
+    height:110px;
+    width:200px;
+}
+.office.horizontal.big2-2{
+    height:110px;
+    width:90px;
+}
+.office.horizontal.big2-2long{
+    height:90px;
+    width:130px;
+}
+.chair{
+    width: 30px;
+    height:30px;
+    background: #ffffff;
+    border-radius: 2px;
+}
+.chair-row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height:67px;
+    align-items: center;
+}
+.chair-column{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 70px;
+}
+.chair-column.long3{
+    height: 110px
+}
+.chair-column.long2{
+    height: 70px
+}
+.chair-row.long5{
+    width: 170px;
+}
+.chair-row.long4{
+    width: 140px;
+}
+
+.wall-left{
+    border-left: solid 5px #142539;
+}
+.wall-top{
+    border-top: solid 5px #142539;
+}
