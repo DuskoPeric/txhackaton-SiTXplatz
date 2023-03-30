@@ -8,7 +8,7 @@ body{
   overflow: auto;
 }
 .map-holder{
-  width: 1600px;
+  width: 2100px;
 }
 .row{
   display:flex;
@@ -26,11 +26,15 @@ body{
 }
 .terasa{
   width: 190px;
-  height: 700px;
+  height: 450px;
   background: #4D8CBD;
   margin-top: -480px;
   position: relative;
   top: 480px;
+  background-image: url(../../assets/images/malaterasa.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 .office.no-bg{
   background: transparent ;
@@ -121,6 +125,32 @@ body{
   background-size: 30%;
   background-repeat: no-repeat;
   background-position:center;
+}
+.kitchen.large{
+  margin-left: 5px;
+  background-size: 10%;
+  width: 500px;
+  height: 200px;
+  margin-bottom: -150px;
+  position: relative;
+  top: -150px;
+}
+.terasa2{
+  display: flex;
+  justify-content: space-around;
+  height: 427px;
+  align-items: center;
+  background: #4d8cbd;
+  width: 250px;
+  border-radius: 5px;
+  font-size: 12px;
+  background-image: url(../../assets/images/velikaterasa.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: relative;
+  margin-left: 5px;
+  margin-top: -202px;
 }
 .printer{
   display: flex;

@@ -347,6 +347,12 @@ const BookPage = () => {
                   <div className="chair revert-right"></div>
               </div>
             </div>
+            <div>
+            <div class="kitchen large"></div>
+          </div>
+          <div>
+          <div class="terasa2"></div>
+          </div>
           </div>
         </div>
       </div>
