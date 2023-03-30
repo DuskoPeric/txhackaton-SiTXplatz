@@ -8,20 +8,36 @@ body{
     overflow: auto;
 }
 .map-holder{
-    width: 1200px;
+    width: 1600px;
 }
 .row{
     display:flex;
+    flex-wrap: wrap;
 }
 .row.bottom{
     display:flex;
     align-items: flex-end;
 }
 .office{
-    background: #234e70;
+    background: #E3E3E3;
     padding: 10px;
     display: flex;
     flex-wrap: wrap;
+}
+.terasa{
+    width: 190px;
+    height: 700px;
+    background: #4D8CBD;
+    margin-top: -480px;
+    position: relative;
+    top: 480px;
+}
+.office.no-bg{
+    background: transparent ;
+}
+.office.sr-c{
+    margin-left: 329px;
+    margin-top: 73px;
 }
 .office.vertical{
     align-items: center;
@@ -58,6 +74,28 @@ body{
 .chair{
     width: 30px;
     height:30px;
+    border-radius: 2px;
+    background-image: url(./assets/Default.svg);
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: 100%;
+    cursor: pointer;
+}
+.chair:hover{
+    background-image: url(./assets/Hover.svg);
+}
+.chair.revert{
+    transform: rotate(180deg);
+}
+.chair.revert-left{
+    transform: rotate(90deg);
+}
+.chair.revert-right{
+    transform: rotate(270deg);
+}
+.couch{
+    width: 130px;
+    height:30px;
     background: #ffffff;
     border-radius: 2px;
 }
@@ -68,6 +106,53 @@ body{
     height:67px;
     align-items: center;
 }
+.kitchen{
+    display: flex;
+    justify-content: space-around;
+    height: 127px;
+    align-items: center;
+    background: #4d8cbd;
+    width: 71px;
+    margin-top: 148px;
+    margin-left: 102px;
+    border-radius: 5px;
+    font-size: 12px;
+    background-image: url('./assets/cutlery.png');
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position:center;
+}
+.printer{
+    display: flex;
+    justify-content: space-around;
+    height: 70px;
+    align-items: center;
+    background: #4d8cbd;
+    width: 70px;
+    margin-top: 48px;
+    margin-left: 162px;
+    border-radius: 5px;
+    font-size: 12px;
+    background-image: url('./assets/cutlery.png');
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position:center;
+}
+.wc{
+    display: flex;
+    justify-content: space-around;
+    height: 231px;
+    align-items: center;
+    background: #4D8CBD;
+    width: 173px;
+    margin-left: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    background-image: url('./assets/toilet.png');
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position:center;
+}
 .chair-column{
     display: flex;
     flex-wrap: wrap;
@@ -77,6 +162,9 @@ body{
 }
 .chair-column.long3{
     height: 110px
+}
+.chair-column.long5{
+    width: 170px
 }
 .chair-column.long2{
     height: 70px
