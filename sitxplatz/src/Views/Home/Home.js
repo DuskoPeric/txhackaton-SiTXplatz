@@ -3,6 +3,7 @@
 import "./Home.scss";
 import { useNavigate } from "react-router-dom";
 import logo from "../../assets/images/txwhite.png";
+import logoBig from "../../assets/images/logo.svg";
 
 const Home = () => {
 
@@ -19,7 +20,7 @@ const Home = () => {
             <span className="left"><img src={logo} /></span>
             <div className="home-container">
                 <div className="logo">
-                    SiTXplatz
+                    <img src={logoBig}/>
                 </div>
                 <div className='home-wrapper'>
                     <div className="login-form"  onClick={() => {

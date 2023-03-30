@@ -2,9 +2,13 @@
 
 import "./BookPage.scss";
 import React, { useState } from 'react';
+import Popup from "../../components/popup/Popup";
 
 const BookPage = () => {
 
+    const [openPopup, setOpenPopup] = useState(false);
+    const [type, setType] = useState(null);
+    const [chair, setChair] = useState(null);
     const [data, setData] = useState({
         "o1-1":false,
         "o1-2":false,
@@ -26,16 +30,31 @@ const BookPage = () => {
         "o1-18":false,
     })
 
+    const setReservation=()=>{
+        const copyData={...data}
+        copyData[chair]=true;
+        setData(copyData)
+        setOpenPopup(false);
+    }
+
+    const hadlePopup=(id,type)=>{
+        setType(type);
+        setChair(id);
+        setOpenPopup(true)
+    }
+
 
     return (
         <>
         <div className="main-container">
+        <div className="parkalot">Book a Parking</div>
+        <div className="parkalot jelena">Complain to Jelena</div>
         <div className="map-holder">
           <div className="row">
             <div className="office vertical big5">
               <div className="chair-row long5">
-                  <div id="o1-1" className={`chair revert ${data['o1-1']?'reserved':null}`}></div>
-                  <div id="o1-2"  className={`chair revert ${data['o1-2']?'reserved':null}`}></div>
+                  <div id="o1-1" onClick={()=>{hadlePopup('o1-1','regular')}} className={`chair revert ${data['o1-1']?'reserved':null}`}></div>
+                  <div id="o1-2"  onClick={()=>{hadlePopup('o1-2','regular')}} className={`chair revert ${data['o1-2']?'reserved':null}`}></div>
                   <div id="o1-3"  className={`chair revert ${data['o1-3']?'reserved':null}`}></div>
                   <div  id="o1-4" className={`chair revert ${data['o1-4']?'reserved':null}`}></div>
                   <div  id="o1-5" className={`chair revert ${data['o1-5']?'reserved':null}`}></div>
@@ -87,6 +106,7 @@ const BookPage = () => {
                   <div className="chair revert-left"></div>
                   <div className="chair revert-right"></div>
               </div>
+              <p className='nametag'>It should have been JobCloud</p>
             </div>
             <div className="office horizontal wall-left big3">
                 <div className="chair-column long3">
@@ -105,6 +125,7 @@ const BookPage = () => {
                     <div className="chair revert-left"></div>
                     <div className="chair revert-right"></div>
                 </div>
+                <p className='nametag'>JobCloud</p>
               </div>
             <div className="office horizontal wall-left big3">
               <div className="chair-column long3">
@@ -123,6 +144,7 @@ const BookPage = () => {
                   <div className="chair revert-left"></div>
                   <div className="chair revert-right"></div>
               </div>
+              <p className='nametag'>JobCloud</p>
             </div>
             <div className="office horizontal wall-left big3 no-bg">
   
@@ -165,10 +187,11 @@ const BookPage = () => {
               </div>
             </div>
             <div>
-              <div className="kitchen"></div>
+              <div className="kitchen"><p className="dot">Coffee here is better</p>
+              </div>
             </div>
             <div>
-                <div className="wc"></div>
+                <div className="wc"><div className="dot">Data for toilet will be done by other team on hackaton</div></div>
             </div>
   
           </div>
@@ -265,7 +288,7 @@ const BookPage = () => {
               </div>
             </div>
             <div>
-                <div className="wc lower"></div>
+                <div className="wc lower"><div className="dot">Data for toilet will be done by other team on hackaton</div></div>
             </div>
           </div>
           <div className="row bottom2">
@@ -378,6 +401,22 @@ const BookPage = () => {
           </div>
         </div>
       </div>
+      {openPopup && (
+        <Popup
+            closePopup={() => {
+                setOpenPopup(false);
+            }}
+        >
+        {type==='regular'&& 
+        <div className="popup-content">
+            <p className="question">Dali zelite da rezervisete ovo mjesto?</p>
+            <div className="actions">
+                <button onClick={setReservation} className="accept">Da</button>
+                <button onClick={()=>{setOpenPopup(false)}} className="decline">Ne</button>
+            </div>
+        </div>}
+        </Popup>
+    )}
         </>
     );
 };

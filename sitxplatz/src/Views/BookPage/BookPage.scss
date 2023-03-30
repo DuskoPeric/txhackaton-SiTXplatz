@@ -3,12 +3,14 @@ body{
   padding: 20px;
 }
 .main-container{
-  width: 100%;
+  width: 80%;
   height: calc(100vh - 60px);
   overflow: auto;
+  background: #0c1623;
 }
 .map-holder{
   width: 2100px;
+  padding: 15px;
 }
 .row{
   display:flex;
@@ -19,12 +21,14 @@ body{
   align-items: flex-end;
 }
 .office{
+  position: relative;
   background: #E3E3E3;
   padding: 10px;
   display: flex;
   flex-wrap: wrap;
 }
 .terasa{
+  border-radius: 5px;
   width: 190px;
   height: 450px;
   background: #4D8CBD;
@@ -115,10 +119,11 @@ body{
   align-items: center;
 }
 .kitchen{
+  position: relative;
+  text-align: center;
   display: flex;
   justify-content: space-around;
   height: 127px;
-  align-items: center;
   background: #4d8cbd;
   width: 71px;
   margin-top: 148px;
@@ -129,6 +134,7 @@ body{
   background-size: 30%;
   background-repeat: no-repeat;
   background-position:center;
+  color: #E3E3E3;
 }
 .kitchen.large{
   margin-left: 5px;
@@ -173,10 +179,13 @@ body{
   background-position:center;
 }
 .wc{
+  position: relative;
   display: flex;
-  justify-content: space-around;
-  height: 224px;
-  align-items: center;
+  color: #E3E3E3;
+  //justify-content: space-around;
+  height: 204px;
+  padding: 20px;
+  //align-items: center;
   background: #4D8CBD;
   width: 173px;
   margin-left: 5px;
@@ -186,16 +195,20 @@ body{
   background-size: 30%;
   background-repeat: no-repeat;
   background-position:center;
+  text-align: center;
 }
 .wc.lower{
   margin-left: 150px;
+  height: 185px;
 }
 .chair-column{
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   width: 70px;
+
 }
 .chair-column.long3{
   height: 110px
@@ -218,4 +231,131 @@ body{
 }
 .wall-top{
   border-top: solid 5px #142539;
+}
+.dot{
+  z-index: 1;
+  position: absolute;
+  background: #4d8cbd;
+  padding: 5px;
+  font-size: 20px;
+  width: 250px;
+  border-radius: 10px;
+  font-weight: 400;
+  top: -70px;
+  left: -21px;
+  display: none;
+  -webkit-box-shadow: 4px 3px 5px 0px rgba(0,0,0,0.33);
+-moz-box-shadow: 4px 3px 5px 0px rgba(0,0,0,0.33);
+box-shadow: 4px 3px 5px 0px rgba(0,0,0,0.33);
+}
+.nametag{
+  z-index: 1;
+  position: absolute;
+  background: #4d8cbd;
+  padding: 5px;
+  font-size: 20px;
+  width: 250px;
+  border-radius: 10px;
+  font-weight: 400;
+  bottom: -70px;
+  left: -21px;
+   display: none;
+  -webkit-box-shadow: 4px 3px 5px 0px rgba(0,0,0,0.33);
+-moz-box-shadow: 4px 3px 5px 0px rgba(0,0,0,0.33);
+box-shadow: 4px 3px 5px 0px rgba(0,0,0,0.33);
+color: white;
+text-align: center;
+}
+.wc:hover .dot{
+  display: block;
+}
+.office:hover .nametag{
+  display: block;
+}
+.kitchen:hover .dot{
+  display: block;
+}
+.kitchen .dot{
+  width: 200px;
+  left: -70px;
+}
+.dot::after{
+  content: '';
+  width: 0;
+height: 0;
+border-style: solid;
+border-width: 10px 10px 0 10px;
+border-color: #4d8cbd transparent transparent transparent;
+bottom: -10px;
+left: 46%;
+position: absolute;
+}
+.nametag::after{
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 10px 10px 10px;
+  border-color: transparent transparent #4d8cbd transparent;
+top: -10px;
+left: 46%;
+position: absolute;
+}
+.popup-content{
+  .question{
+    font-size: 25px;
+    text-align: center;
+    font-weight: 600;
+  }
+  .actions{
+    width: 250px;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    button{
+      border: none;
+      width: 100px;
+      padding:10px 0px;
+      text-transform: uppercase;
+      font-weight: 600;
+      border-radius: 5px;
+      cursor: pointer;
+      &.accept{
+        background: #26dd8c;
+      }
+      &.decline{
+        background: #9f9f9f;
+      }
+    }
+  }
+}
+.parkalot {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  border: 1px solid #fff;
+  box-shadow: 1px 1px 11px #0ba360;
+  margin-right:20px;
+  border-radius: 10px;
+  padding: 20px;
+  cursor: pointer;
+  color: white;
+  letter-spacing:2px;
+  background-size: 300% 100%;
+  background-image: linear-gradient(to right, #0ba360, #3cba92, #30dd8a, #2bb673);
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  &.jelena {
+    top: 120px;
+
+  }
+  &:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+  }
 }
