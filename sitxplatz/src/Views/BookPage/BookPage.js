@@ -12,7 +12,7 @@ const BookPage = () => {
           <div className="row">
             <div className="office vertical big5">
               <div className="chair-row long5">
-                  <div className="chair revert"></div>
+                  <div className="chair revert reserved"></div>
                   <div className="chair revert"></div>
                   <div className="chair revert"></div>
                   <div className="chair revert"></div>

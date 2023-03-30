@@ -88,6 +88,10 @@ body{
 .chair:hover{
   background-image: url(../../assets/images/Hover.svg);
 }
+.chair.reserved{
+  background-image: url(../../assets/images/Disabled.svg);
+  cursor: not-allowed;
+}
 .chair.revert{
   transform: rotate(180deg);
 }
@@ -171,7 +175,7 @@ body{
 .wc{
   display: flex;
   justify-content: space-around;
-  height: 231px;
+  height: 224px;
   align-items: center;
   background: #4D8CBD;
   width: 173px;
