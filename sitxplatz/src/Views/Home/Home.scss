@@ -1,0 +1,243 @@
+.home-container {
+  height: calc(100vh - 80px);
+  padding: 20px;
+  background-color: #fbfbfb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  //border-top: 10px solid rgba(255, 49, 49, 0.5);
+  //border-right: 10px solid rgba(0, 255, 255, 0.5);
+  //border-bottom: 10px solid rgba(57, 255, 20, 0.5);
+  //border-left: 10px solid rgba(255, 255, 113, 0.5);
+}
+
+
+.logo {
+  font-size: 80px;
+  margin-bottom: 30px;
+}
+
+.vuleta {
+  height: 500px;
+  width:500px;
+  background: url(../../assets/images/vuleta.jpg) center;
+  background-size: cover;
+  animation: pulse-vuleta 1s infinite;
+
+  &:hover {
+    transform: rotate(180deg);
+  }
+}
+
+.login-form {
+  border: 1px solid #fff;
+  box-shadow: 1px 1px 11px #0ba360;
+  margin-right:20px;
+  border-radius: 10px;
+  padding: 20px;
+  cursor: pointer;
+  color: white;
+  letter-spacing:2px;
+  background-size: 300% 100%;
+  background-image: linear-gradient(to right, #0ba360, #3cba92, #30dd8a, #2bb673);
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  &:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+  }
+}
+.home-wrapper {
+  display: flex;
+  align-items: center
+}
+
+.footer {
+  margin-top: 50px;
+  border-top: 1px solid #0ba360;
+  padding: 20px;
+}
+
+
+@keyframes pulse-vuleta {
+  0% {
+    transform: scale(0.95);
+  }
+
+  70% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0.95);
+  }
+}
+
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 50px;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 150px;
+  background: linear-gradient(
+                  90deg,
+                  transparent 50%,
+                  rgb(0, 218, 145),
+                  rgba(0, 218, 145, 0.5),
+  );
+}
+span {
+  position: absolute;
+  border-radius: 100vmax;
+  img {
+    margin: 40px;
+    width: 120px;
+    height: 45px;
+  }
+}
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: row-reverse;
+  color: white;
+  font-size: 50px;
+  right: 0;
+  bottom: 0;
+  height: 150px;
+  background: linear-gradient(
+                  90deg,
+                  rgb(0, 218, 145),
+                  rgba(0, 218, 145, 0.5),
+                  transparent 50%
+  );
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  justify-content: flex-end;
+  font-size: 50px;
+  top: 0;
+  right: 0;
+  width: 150px;
+  height: 0;
+  background: linear-gradient(
+                  180deg,
+                  transparent 30%,
+                  rgb(0, 218, 145),
+                  rgba(0, 218, 145, 0.5),
+  );
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  color: white;
+  font-size: 50px;
+  left: 0;
+  bottom: 0;
+  width: 150px;
+  height: 0;
+  background: linear-gradient(
+                  180deg,
+                  rgb(0, 218, 145),
+                  rgba(0, 218, 145, 0.5),
+                  transparent 70%
+  );
+}
+.top {
+  text-align: center;
+  font-size: 40px;
+  color: white;
+  animation: animateTop 5s ease-in-out infinite;
+}
+
+.bottom {
+  animation: animateBottom 5s ease-in-out infinite;
+}
+
+.right {
+  animation: animateRight 5s ease-in-out infinite;
+}
+
+.left {
+  animation: animateLeft 5s ease-in-out infinite;
+}
+
+@keyframes animateTop {
+  25% {
+    width: 100%;
+    opacity: 1;
+  }
+
+  30%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes animateBottom {
+  0%,
+  50% {
+    opacity: 0;
+    width: 0;
+  }
+
+  75% {
+    opacity: 1;
+    width: 100%;
+  }
+
+  76%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes animateRight {
+  0%,
+  25% {
+    opacity: 0;
+    height: 0;
+  }
+
+  50% {
+    opacity: 1;
+    height: 100%;
+  }
+
+  55%,
+  100% {
+    height: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes animateLeft {
+  0%,
+  75% {
+    opacity: 0;
+    bottom: 0;
+    height: 0;
+  }
+
+  100% {
+    opacity: 1;
+    height: 100%;
+  }
+}
