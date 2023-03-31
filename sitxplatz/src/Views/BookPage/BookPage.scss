@@ -1,5 +1,5 @@
 body{
-  background: #142539;
+  background: #142539db;
   padding: 20px;
 }
 .main-container{
@@ -64,48 +64,47 @@ body{
   clip-path: polygon(0% 100%, 0% 0%, 73% 0%, 73% 10%, 73% 32%, 63% 32%,45% 32%, 45% 69%, 73% 69%, 97% 69%, 97% 100%, 92% 100%);
   background-color: #0c1623;
 
-  .direktorka {
-    z-index: 9999;
+}
+.direktorka {
+  z-index: 9999;
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background-image: url(../../assets/images/direktorka.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  .poruka {
     position: absolute;
-    width: 120px;
-    height: 120px;
-    background-image: url(../../assets/images/direktorka.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    .poruka {
-      position: absolute;
-      top: -40px;
-      left: -0px;
-      width: 150px;
-      text-align: center;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      letter-spacing: 1px;
-      font-weight: bold;
-      background: white;
-    color: black;
-    padding: 5px;
-    border-radius: 10px;
-    -webkit-box-shadow: 4px 3px 5px 0px rgba(0,0,0,0.33);
-    -moz-box-shadow: 4px 3px 5px 0px rgba(0,0,0,0.33);
-    box-shadow: 4px 3px 5px 0px rgba(0,0,0,0.33);
-    &::after{
-      content: '';
-      bottom: -10px;
-      left:20px;
-      position: absolute;
-      width: 0;
+    top: -40px;
+    left: -0px;
+    width: 150px;
+    text-align: center;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 1px;
+    font-weight: bold;
+    background: white;
+  color: black;
+  padding: 5px;
+  border-radius: 10px;
+  -webkit-box-shadow: 4px 3px 5px 0px rgba(0,0,0,0.33);
+  -moz-box-shadow: 4px 3px 5px 0px rgba(0,0,0,0.33);
+  box-shadow: 4px 3px 5px 0px rgba(0,0,0,0.33);
+  &::after{
+    content: '';
+    bottom: -10px;
+    left:20px;
+    position: absolute;
+    width: 0;
 height: 0;
 border-style: solid;
 border-width: 10px 10px 0 10px;
 border-color: white transparent transparent transparent;
-    }
-    }
   }
-
+  }
 }
 .jobCloudOverlay {
   display: flex;

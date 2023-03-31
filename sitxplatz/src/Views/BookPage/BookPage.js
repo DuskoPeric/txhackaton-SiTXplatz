@@ -136,13 +136,7 @@ const BookPage = () => {
 
 
 
-                <div style={{left: coords.x, top: coords.y}} className="direktorka">
 
-                    <div className="poruka">
-                        {direktorkaMessage}
-
-                    </div>
-                </div>
                 <div className="row">
             <div className="office vertical big5">
               <div className="chair-row long5">
