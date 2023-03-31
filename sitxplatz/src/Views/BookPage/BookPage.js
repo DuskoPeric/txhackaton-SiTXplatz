@@ -1,13 +1,15 @@
-
-
 import "./BookPage.scss";
-import React, { useState } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import Popup from "../../components/popup/Popup";
 
 const BookPage = () => {
 
     const [openPopup, setOpenPopup] = useState(false);
     const [openJobCloud, setOpenJobCloud] = useState(false);
+    const [openDusko, setDusko] = useState(false);
+    const [direktorkaMessage, setDirektorkaMessage] = useState('');
+    const [direktorkaMessageShow, setDirektorkaMessageShow] = useState(false);
+    const [coords, setCoords] = useState({x: 0, y: 0});
     const [type, setType] = useState(null);
     const [chair, setChair] = useState(null);
     const [data, setData] = useState({
@@ -38,6 +40,10 @@ const BookPage = () => {
         setOpenPopup(false);
     }
 
+    const closePopup=()=> {
+        setOpenPopup(false);
+    }
+
     const handleJobCloud= (value) => {
         setOpenJobCloud(value)
         setOpenPopup(false)
@@ -49,9 +55,40 @@ const BookPage = () => {
         setOpenPopup(true)
     }
 
+    const handleDusko = (value) =>{
+        setOpenPopup(false)
+        setDusko(value)
+    }
+    const jeleninePoruke=['clan 32', 'Da, a?', '', 'Rezervisite parking', 'Vule(ta) dodji vamo', '', 'Ukinucemo parking']
+    const shuffle = useCallback(() => {
+        const index = Math.floor(Math.random() * jeleninePoruke.length);
+        setDirektorkaMessage(jeleninePoruke[index]);
+    }, []);
+    useEffect(() => {
+        const handleWindowMouseMove = event => {
+            setTimeout(()=> setCoords({
+                x: event.clientX,
+                y: event.clientY,
+            }), 1000)
+
+        };
+
+        window.addEventListener('mousemove', handleWindowMouseMove);
+        // setInterval(() => setDirektorkaMessage(jeleninePoruke[Math.floor(Math.random()*jeleninePoruke.length)]), 500)
 
 
+        return () => {
+            window.removeEventListener(
+                'mousemove',
+                handleWindowMouseMove,
+            );
+        };
+    }, []);
 
+    useEffect(() => {
+        const intervalID = setInterval(shuffle, 2000);
+        return () => clearInterval(intervalID);
+    }, [shuffle])
     return (
         <>
         <div className="main-container">
@@ -68,7 +105,23 @@ const BookPage = () => {
                         </div>
                     ):null}
 
-          <div className="row">
+                {openDusko ?
+                    (<div className="dusko">
+                        <h2>ĐE ĆEŠ BA NA PORAZ</h2>
+                        <div className="slika"></div>
+                        <div className="kapituliraj" onClick={()=>{handleDusko(false)}}>Kapituliraj</div>
+                    </div>):null}
+
+                <div style={{left: coords.x, top: coords.y}} className="direktorka">
+
+                    <div className="poruka">
+                        {direktorkaMessage}
+
+                    </div>
+                </div>
+
+
+                <div className="row">
             <div className="office vertical big5">
               <div className="chair-row long5">
                   <div id="o1-1" onClick={()=>{!data['o1-1'] && hadlePopup('o1-1','regular')}} className={`chair revert ${data['o1-1']?'reserved':null}`}></div>
@@ -281,7 +334,7 @@ const BookPage = () => {
             <div className="vuleta-scooter"></div>
         </div>
             <div>
-            <div className="popcorn"></div>
+            <div className="popcorn" onClick={()=>{!data['o1-1'] && hadlePopup('o1-1','popcorn')} }></div>
         </div>
           </div>
           <div className="row">
@@ -315,7 +368,9 @@ const BookPage = () => {
                 <div className="wc lower"><div className="dot">Data for toilet will be done by other team on hackaton</div></div>
             </div>
             <div>
-            <div className="tabletennis"></div>
+            <div className="tabletennis" onClick={()=>{!data['o1-1'] && hadlePopup('o1-1','tennis')}}>
+
+            </div>
         </div>
           </div>
           <div className="row bottom2">
@@ -467,6 +522,22 @@ const BookPage = () => {
                     <p className="question">JobCloud ima posjetu iz Švice, treba im ceo sprat</p>
                     <div className="actions">
                         <button onClick={()=>{handleJobCloud(true)}} className="accept">Rezerviši</button>
+                        <button onClick={()=>{setOpenPopup(false)}} className="decline">Ne</button>
+                    </div>
+                </div>}
+            {type==='tennis'&&
+                <div className="popup-content">
+                    <p className="question">Želiš igrat tjenisa sa Duškom</p>
+                    <div className="actions">
+                        <button onClick={()=>{handleDusko(true)}} className="accept">Jašta</button>
+                        <button onClick={()=>{setOpenPopup(false)}} className="decline">Ne</button>
+                    </div>
+                </div>}
+            {type==='popcorn'&&
+                <div className="popup-content">
+                    <p className="question">Kokaće Žile</p>
+                    <div className="actions">
+                        <button onClick={()=>{closePopup(false)}} className="accept">Kokaj</button>
                         <button onClick={()=>{setOpenPopup(false)}} className="decline">Ne</button>
                     </div>
                 </div>}
