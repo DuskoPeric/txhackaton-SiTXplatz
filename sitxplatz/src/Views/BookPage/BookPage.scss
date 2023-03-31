@@ -456,6 +456,30 @@ border-color: white transparent transparent transparent;
   background-repeat: no-repeat;
   background-position:center;
   cursor: pointer;
+  &:hover {
+    .arnidrobke {
+      display: block;
+    }
+  }
+  .arnidrobke {
+    display: none;
+    position: absolute;
+    right: 100px;
+    top: -150px;
+    width: 450px;
+    height:450px;
+    background-image: url(../../assets/images/soni.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    h2 {
+      color: white;
+      position: absolute;
+      top: -75px;
+      right: 10px;
+      font-size: 40px;
+    }
+  }
 }
 .popcorn{
   display: flex;

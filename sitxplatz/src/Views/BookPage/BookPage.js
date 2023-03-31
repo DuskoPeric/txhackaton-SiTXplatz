@@ -322,7 +322,11 @@ const BookPage = () => {
                 <div className="printer" onClick={()=>{hadlePopup('o1-1','vesna')}}></div>
             </div>
             <div>
-            <div className="ps5"></div>
+            <div className="ps5">
+                <div className="arnidrobke">
+                    <h2>Punih 8 sati rada</h2>
+                </div>
+            </div>
         </div>
           </div>
           <div className="row">
