@@ -246,6 +246,23 @@ border-color: white transparent transparent transparent;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+  &:hover {
+    .cigara {
+      display: block;
+    }
+  }
+  .cigara {
+    position: absolute;
+    top: calc(20% - 50px);
+    left: calc(50% - 50px);
+    display: none;
+    width: 100px;
+    height: 100px;
+    background-image: url(../../assets/images/cigareta.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
 }
 .office.no-bg{
   background: transparent ;
@@ -386,6 +403,23 @@ border-color: white transparent transparent transparent;
   position: relative;
   margin-left: 5px;
   margin-top: -202px;
+  &:hover {
+    .cigara {
+      display: block;
+    }
+  }
+  .cigara {
+    position: absolute;
+    bottom: calc(30% - 50px);
+    right: calc(30% - 50px);
+    display: none;
+    width: 100px;
+    height: 100px;
+    background-image: url(../../assets/images/cigareta.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
 }
 .printer{
   display: flex;

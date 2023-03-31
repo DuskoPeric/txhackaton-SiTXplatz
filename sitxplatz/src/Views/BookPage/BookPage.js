@@ -246,7 +246,7 @@ const BookPage = () => {
   
               </div>
             <div className="terasa">
-  
+                <div className="cigara"></div>
             </div>
           </div>
           <div className="row">
@@ -517,6 +517,7 @@ const BookPage = () => {
           </div>
           <div>
           <div className="terasa2">
+              <div className="cigara"></div>
           </div>
           </div>
           </div>
