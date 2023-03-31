@@ -246,6 +246,23 @@ border-color: white transparent transparent transparent;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+  &:hover {
+    .cigara {
+      display: block;
+    }
+  }
+  .cigara {
+    position: absolute;
+    top: calc(20% - 50px);
+    left: calc(50% - 50px);
+    display: none;
+    width: 100px;
+    height: 100px;
+    background-image: url(../../assets/images/cigareta.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
 }
 .office.no-bg{
   background: transparent ;
@@ -386,6 +403,23 @@ border-color: white transparent transparent transparent;
   position: relative;
   margin-left: 5px;
   margin-top: -202px;
+  &:hover {
+    .cigara {
+      display: block;
+    }
+  }
+  .cigara {
+    position: absolute;
+    bottom: calc(30% - 50px);
+    right: calc(30% - 50px);
+    display: none;
+    width: 100px;
+    height: 100px;
+    background-image: url(../../assets/images/cigareta.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
 }
 .printer{
   display: flex;
@@ -422,6 +456,30 @@ border-color: white transparent transparent transparent;
   background-repeat: no-repeat;
   background-position:center;
   cursor: pointer;
+  &:hover {
+    .arnidrobke {
+      display: block;
+    }
+  }
+  .arnidrobke {
+    display: none;
+    position: absolute;
+    right: 100px;
+    top: -150px;
+    width: 450px;
+    height:450px;
+    background-image: url(../../assets/images/soni.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    h2 {
+      color: white;
+      position: absolute;
+      top: -75px;
+      right: 10px;
+      font-size: 40px;
+    }
+  }
 }
 .popcorn{
   display: flex;
