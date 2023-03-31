@@ -179,6 +179,32 @@ border-color: white transparent transparent transparent;
   padding: 10px;
   display: flex;
   flex-wrap: wrap;
+  &.ziletov-office {
+    &:hover {
+      .zile {
+        display: block;
+      }
+    }
+    .zile {
+      display: none;
+      position: absolute;
+      left: 0;
+      top: -150px;
+      width: 150px;
+      height:150px;
+      background-image: url(../../assets/images/zile.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      h2 {
+        color: white;
+        position: absolute;
+        top: -75px;
+        right: 10px;
+        font-size: 40px;
+      }
+    }
+  }
 }
 .terasa{
   border-radius: 5px;

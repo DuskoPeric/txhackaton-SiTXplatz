@@ -11,6 +11,7 @@ const BookPage = () => {
     const [coords, setCoords] = useState({x: 0, y: 0});
     const [type, setType] = useState(null);
     const [chair, setChair] = useState(null);
+    const [toilets, setToilets] =useState([]);
     const [data, setData] = useState({
         "o1-1":false,
         "o1-2":false,
@@ -63,6 +64,17 @@ const BookPage = () => {
         const index = Math.floor(Math.random() * jeleninePoruke.length);
         setDirektorkaMessage(jeleninePoruke[index]);
     }, []);
+    async function getToilets() {
+        try {
+            let response = await fetch('https://tos-svc.ricardo-dev.ch/gmt/tos/cabins');
+            let responseJson = await response.json();
+            // let cabins = responseJson.cabins;
+            setToilets(responseJson);
+            // return responseJson;
+        } catch(error) {
+            console.error(error);
+        }
+    }
     useEffect(() => {
         const handleWindowMouseMove = event => {
             setTimeout(()=> setCoords({
@@ -87,9 +99,13 @@ const BookPage = () => {
     useEffect(() => {
         const intervalID = setInterval(shuffle, 2000);
         return () => clearInterval(intervalID);
-    }, [shuffle])
+    }, [shuffle]);
+    useEffect(() => {
+        getToilets();
+    }, []);
     return (
         <>
+            {/*<b style={{color: 'white', fontSize:50}}>{toilets}</b>*/}
         <div className="main-container">
         {openDusko ?
             (<div className="dusko">
@@ -465,8 +481,11 @@ const BookPage = () => {
                   <div className="chair revert-right"></div>
               </div>
             </div>
-            <div className="office horizontal wall-left big2-2">
-              <div className="chair-column long2">
+            <div className="office horizontal wall-left big2-2 ziletov-office">
+                <div className='zile'>
+                    <h2>DA,A ?</h2>
+                </div>
+              <div className="chair-column long2 ">
                   <div className="chair revert-left"></div>
                   <div className="chair revert-right"></div>
                   <div className="chair revert-left"></div>
@@ -482,14 +501,14 @@ const BookPage = () => {
               </div>
             </div>
             <div>
-            <div class="kitchen large">
+            <div className="kitchen large">
                 <div className="aleksandra" onClick={()=>{hadlePopup('o1-1','aleksandra')}}>
 
                 </div>
             </div>
           </div>
           <div>
-          <div class="terasa2">
+          <div className="terasa2">
           </div>
           </div>
           </div>
