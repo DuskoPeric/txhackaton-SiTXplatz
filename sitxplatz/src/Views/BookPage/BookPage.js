@@ -53,26 +53,26 @@ const BookPage = () => {
           <div className="row">
             <div className="office vertical big5">
               <div className="chair-row long5">
-                  <div id="o1-1" onClick={()=>{hadlePopup('o1-1','regular')}} className={`chair revert ${data['o1-1']?'reserved':null}`}></div>
-                  <div id="o1-2"  onClick={()=>{hadlePopup('o1-2','regular')}} className={`chair revert ${data['o1-2']?'reserved':null}`}></div>
-                  <div id="o1-3"  className={`chair revert ${data['o1-3']?'reserved':null}`}></div>
-                  <div  id="o1-4" className={`chair revert ${data['o1-4']?'reserved':null}`}></div>
-                  <div  id="o1-5" className={`chair revert ${data['o1-5']?'reserved':null}`}></div>
-                <div  id="o1-6" className={`chair  ${data['o1-6']?'reserved':null}`}></div>
-                <div id="o1-7"  className={`chair  ${data['o1-7']?'reserved':null}`}></div>
-                <div id="o1-8"  className={`chair  ${data['o1-8']?'reserved':null}`}></div>
-                <div id="o1-9"  className={`chair  ${data['o1-9']?'reserved':null}`}></div>
-                <div id="o1-10"  className={`chair  ${data['o1-10']?'reserved':null}`}></div>
+                  <div id="o1-1" onClick={()=>{!data['o1-1'] && hadlePopup('o1-1','regular')}} className={`chair revert ${data['o1-1']?'reserved':null}`}></div>
+                  <div id="o1-2"  onClick={()=>{!data['o1-2'] && hadlePopup('o1-2','regular')}} className={`chair revert ${data['o1-2']?'reserved':null}`}></div>
+                  <div id="o1-3"  onClick={()=>{!data['o1-3'] && hadlePopup('o1-3','regular')}} className={`chair revert ${data['o1-3']?'reserved':null}`}></div>
+                  <div  id="o1-4" onClick={()=>{!data['o1-4'] && hadlePopup('o1-4','regular')}} className={`chair revert ${data['o1-4']?'reserved':null}`}></div>
+                  <div  id="o1-5" onClick={()=>{!data['o1-5'] && hadlePopup('o1-5','regular')}} className={`chair revert ${data['o1-5']?'reserved':null}`}></div>
+                <div  id="o1-6" onClick={()=>{!data['o1-6'] && hadlePopup('o1-6','regular')}} className={`chair  ${data['o1-6']?'reserved':null}`}></div>
+                <div id="o1-7"  onClick={()=>{!data['o1-7'] && hadlePopup('o1-7','regular')}} className={`chair  ${data['o1-7']?'reserved':null}`}></div>
+                <div id="o1-8"  onClick={()=>{!data['o1-8'] && hadlePopup('o1-8','regular')}} className={`chair  ${data['o1-8']?'reserved':null}`}></div>
+                <div id="o1-9"  onClick={()=>{!data['o1-9'] && hadlePopup('o1-9','regular')}} className={`chair  ${data['o1-9']?'reserved':null}`}></div>
+                <div id="o1-10"  onClick={()=>{!data['o1-10'] && hadlePopup('o1-10','regular')}} className={`chair  ${data['o1-10']?'reserved':null}`}></div>
               </div>
               <div className="chair-row long4">
-                <div id="o1-11" className={`chair revert ${data['o1-11']?'reserved':null}`}></div>
-                <div id="o1-12" className={`chair revert ${data['o1-12']?'reserved':null}`}></div>
-                <div id="o1-13" className={`chair revert ${data['o1-13']?'reserved':null}`}></div>
-                <div id="o1-14" className={`chair revert ${data['o1-14']?'reserved':null}`}></div>
-                <div id="o1-15" className={`chair  ${data['o1-15']?'reserved':null}`}></div>
-                <div id="o1-16" className={`chair  ${data['o1-16']?'reserved':null}`}></div>
-                <div id="o1-17" className={`chair  ${data['o1-17']?'reserved':null}`}></div>
-                <div id="o1-18" className={`chair  ${data['o1-18']?'reserved':null}`}></div>
+                <div id="o1-11" onClick={()=>{!data['o1-11'] && hadlePopup('o1-11','regular')}}v className={`chair revert ${data['o1-11']?'reserved':null}`}></div>
+                <div id="o1-12" onClick={()=>{!data['o1-12'] && hadlePopup('o1-12','regular')}} className={`chair revert ${data['o1-12']?'reserved':null}`}></div>
+                <div id="o1-13" onClick={()=>{!data['o1-13'] && hadlePopup('o1-13','regular')}} className={`chair revert ${data['o1-13']?'reserved':null}`}></div>
+                <div id="o1-14" onClick={()=>{!data['o1-14'] && hadlePopup('o1-14','regular')}} className={`chair revert ${data['o1-14']?'reserved':null}`}></div>
+                <div id="o1-15" onClick={()=>{!data['o1-15'] && hadlePopup('o1-15','regular')}} className={`chair  ${data['o1-15']?'reserved':null}`}></div>
+                <div id="o1-16" onClick={()=>{!data['o1-16'] && hadlePopup('o1-16','regular')}} className={`chair  ${data['o1-16']?'reserved':null}`}></div>
+                <div id="o1-17" onClick={()=>{!data['o1-17'] && hadlePopup('o1-17','regular')}} className={`chair  ${data['o1-17']?'reserved':null}`}></div>
+                <div id="o1-18" onClick={()=>{!data['o1-18'] && hadlePopup('o1-18','regular')}} className={`chair  ${data['o1-18']?'reserved':null}`}></div>
               </div>
             </div>
             <div className="office horizontal wall-left big3">
