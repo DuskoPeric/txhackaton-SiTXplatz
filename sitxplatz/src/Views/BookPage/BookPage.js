@@ -59,7 +59,7 @@ const BookPage = () => {
         setOpenPopup(false)
         setDusko(value)
     }
-    const jeleninePoruke=['Član 32', 'Da, a?', '...', 'Rezervišite parking', 'Vule(ta) dodji vamo', '...', 'Ukinućemo parking']
+    const jeleninePoruke=['Član 32', '...', 'Rezervišite parking', 'Vule(ta) dodji vamo', '...', 'Ukinućemo parking']
     const shuffle = useCallback(() => {
         const index = Math.floor(Math.random() * jeleninePoruke.length);
         setDirektorkaMessage(jeleninePoruke[index]);
@@ -396,17 +396,17 @@ const BookPage = () => {
             <div>
                 <div className="wc lower"><div className="dot">Data for toilet will be done by other team on hackaton</div></div>
             </div>
-            <div className="vuleta-scooter" onClick={()=>{!data['o1-1'] && hadlePopup('o1-1','scooter')} }>
+            <div className="vuleta-scooter" onClick={()=>{hadlePopup('o1-1','scooter')} }>
             <div className="dot vs">Vuleta dosao trotinetom</div>
         </div>
         <div>
-        <div className="popcorn" onClick={()=>{!data['o1-1'] && hadlePopup('o1-1','popcorn')} }></div>
+        <div className="popcorn" onClick={()=>{hadlePopup('o1-1','popcorn')} }></div>
     </div>
     <div>
     <div className="wc small"><div className="dot">Data for toilet will be done by other team on hackaton</div></div>
 </div>
             <div>
-            <div className="tabletennis" onClick={()=>{!data['o1-1'] && hadlePopup('o1-1','tennis')}}>
+            <div className="tabletennis" onClick={()=>{hadlePopup('o1-1','tennis')}}>
 
             </div>
         </div>
