@@ -7,6 +7,7 @@ import Popup from "../../components/popup/Popup";
 const BookPage = () => {
 
     const [openPopup, setOpenPopup] = useState(false);
+    const [openJobCloud, setOpenJobCloud] = useState(false);
     const [type, setType] = useState(null);
     const [chair, setChair] = useState(null);
     const [data, setData] = useState({
@@ -37,6 +38,11 @@ const BookPage = () => {
         setOpenPopup(false);
     }
 
+    const handleJobCloud= (value) => {
+        setOpenJobCloud(value)
+        setOpenPopup(false)
+    }
+
     const hadlePopup=(id,type)=>{
         setType(type);
         setChair(id);
@@ -44,12 +50,24 @@ const BookPage = () => {
     }
 
 
+
+
     return (
         <>
         <div className="main-container">
         <div className="parkalot">Book a Parking</div>
         <div className="parkalot jelena">Complain to Jelena</div>
-        <div className="map-holder">
+        <div className="parkalot jobCloud" onClick={()=>{hadlePopup('o1-1','JobCloud')}}>Book all for JobCloud</div>
+            <div className="map-holder">
+                {openJobCloud ?
+                    (
+                        <div className="jobCloudOverlay">
+                            <div className="headline-wrapper"><div>Sve uze</div><div className="jclogo"></div>
+                            </div>
+                            <div className="denied" onClick={()=>{handleJobCloud(false)}}>Rjeci ne Poslovnom oblaku</div>
+                        </div>
+                    ):null}
+
           <div className="row">
             <div className="office vertical big5">
               <div className="chair-row long5">
@@ -223,7 +241,7 @@ const BookPage = () => {
               </div>
             </div>
             <div>
-                <div className="printer"></div>
+                <div className="printer" onClick={()=>{hadlePopup('o1-1','vesna')}}></div>
             </div>
           </div>
           <div className="row">
@@ -393,7 +411,11 @@ const BookPage = () => {
               </div>
             </div>
             <div>
-            <div class="kitchen large"></div>
+            <div class="kitchen large">
+                <div className="aleksandra" onClick={()=>{hadlePopup('o1-1','aleksandra')}}>
+
+                </div>
+            </div>
           </div>
           <div>
           <div class="terasa2"></div>
@@ -415,6 +437,30 @@ const BookPage = () => {
                 <button onClick={()=>{setOpenPopup(false)}} className="decline">Ne</button>
             </div>
         </div>}
+            {type==='aleksandra'&&
+                <div className="popup-content">
+                    <p className="question">Kontaktirajte Aleksandru da sredi kafe aparat?</p>
+                    <div className="actions">
+                        <button onClick={setReservation} className="accept">Da</button>
+                        <button onClick={()=>{setOpenPopup(false)}} className="decline">Ne</button>
+                    </div>
+                </div>}
+            {type==='vesna'&&
+                <div className="popup-content">
+                    <p className="question">Za stampanje vam je potrebna Vjesna, kontaktirajte Vjesnu</p>
+                    <div className="actions">
+                        <a href="tel:0614433840"><button onClick={setReservation} className="accept">Pozovi Vjesnu</button></a>
+                        <button onClick={()=>{setOpenPopup(false)}} className="decline">Ne</button>
+                    </div>
+                </div>}
+            {type==='JobCloud'&&
+                <div className="popup-content">
+                    <p className="question">JobCloud ima posjetu iz Švice, treba im ceo sprat</p>
+                    <div className="actions">
+                        <button onClick={()=>{handleJobCloud(true)}} className="accept">Rezerviši</button>
+                        <button onClick={()=>{setOpenPopup(false)}} className="decline">Ne</button>
+                    </div>
+                </div>}
         </Popup>
     )}
         </>

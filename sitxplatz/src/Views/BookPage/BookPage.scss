@@ -9,8 +9,68 @@ body{
   background: #0c1623;
 }
 .map-holder{
+  position: relative;
   width: 2100px;
   padding: 15px;
+  .jobCloudOverlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font-size: 55px;
+    letter-spacing:2px;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.6);
+    z-index: 100;
+    .headline-wrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      .jclogo {
+        margin-bottom: 0;
+        margin-left: 15px;
+      }
+    }
+    .jclogo {
+      width: 200px;
+      height:50px;
+      margin-bottom: 50px;
+      background-image: url(../../assets/images/jobcloud.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+
+    .denied {
+      font-size: 20px;
+      margin-top: 45px;
+      border: 1px solid #fff;
+      box-shadow: 1px 1px 11px #0ba360;
+      margin-right:20px;
+      border-radius: 10px;
+      padding: 20px;
+      cursor: pointer;
+      color: white;
+      letter-spacing:2px;
+      background-size: 300% 100%;
+      background-image: linear-gradient(to right, #0ba360, #3cba92, #30dd8a, #2bb673);
+      moz-transition: all .4s ease-in-out;
+      -o-transition: all .4s ease-in-out;
+      -webkit-transition: all .4s ease-in-out;
+      transition: all .4s ease-in-out;
+      &:hover {
+        background-position: 100% 0;
+        moz-transition: all .4s ease-in-out;
+        -o-transition: all .4s ease-in-out;
+        -webkit-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out;
+      }
+    }
+  }
 }
 .row{
   display:flex;
@@ -144,6 +204,17 @@ body{
   margin-bottom: -150px;
   position: relative;
   top: -150px;
+
+  .aleksandra {
+    position: absolute;
+    right: 75px;
+    top: 25px;
+    width: 25px;
+    height: 25px;
+    background-image: url('../../assets/images/aleksandra.png');
+    background-size: cover;
+    cursor: pointer;
+  }
 }
 .terasa2{
   display: flex;
@@ -177,6 +248,7 @@ body{
   background-size: 35%;
   background-repeat: no-repeat;
   background-position:center;
+  cursor: pointer;
 }
 .wc{
   position: relative;
@@ -350,6 +422,9 @@ position: absolute;
   &.jelena {
     top: 120px;
 
+  }
+  &.jobCloud {
+    top: 220px;
   }
   &:hover {
     background-position: 100% 0;
