@@ -6,7 +6,6 @@ body{
   width: 80%;
   height: calc(100vh - 60px);
   overflow: auto;
-  background: #0c1623;
 }
 
 .dusko {
@@ -62,6 +61,9 @@ body{
   position: relative;
   width: 2100px;
   padding: 15px;
+  clip-path: polygon(0% 100%, 0% 0%, 73% 0%, 73% 10%, 73% 32%, 63% 32%,45% 32%, 45% 69%, 73% 69%, 97% 69%, 97% 100%, 92% 100%);
+  background-color: #0c1623;
+
   .direktorka {
     z-index: 9999;
     position: absolute;
@@ -72,11 +74,35 @@ body{
     background-position: center;
     background-size: contain;
     .poruka {
+      position: absolute;
       top: -40px;
-      left: -40px;
-      color: white;
+      left: -0px;
+      width: 150px;
+      text-align: center;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       letter-spacing: 1px;
       font-weight: bold;
+      background: white;
+    color: black;
+    padding: 5px;
+    border-radius: 10px;
+    -webkit-box-shadow: 4px 3px 5px 0px rgba(0,0,0,0.33);
+    -moz-box-shadow: 4px 3px 5px 0px rgba(0,0,0,0.33);
+    box-shadow: 4px 3px 5px 0px rgba(0,0,0,0.33);
+    &::after{
+      content: '';
+      bottom: -10px;
+      left:20px;
+      position: absolute;
+      width: 0;
+height: 0;
+border-style: solid;
+border-width: 10px 10px 0 10px;
+border-color: white transparent transparent transparent;
+    }
     }
   }
   .jobCloudOverlay {
