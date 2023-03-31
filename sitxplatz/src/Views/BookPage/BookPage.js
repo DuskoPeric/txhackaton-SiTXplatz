@@ -194,7 +194,7 @@ const BookPage = () => {
                   <div className="chair revert-left"></div>
                   <div className="chair revert-right"></div>
               </div>
-              <p className='nametag'>It should have been JobCloud</p>
+              <p className='nametag'>SMG PREUZEO OD JOBCLOUD-a</p>
             </div>
             <div className="office horizontal wall-left big3">
                 <div className="chair-column long3">
