@@ -389,7 +389,7 @@ const BookPage = () => {
                 <div className="wc lower"><div className="dot">Data for toilet will be done by other team on hackaton</div></div>
             </div>
             <div className="vuleta-scooter" onClick={()=>{!data['o1-1'] && hadlePopup('o1-1','scooter')} }>
-            <div className="dot">Vuleta dosao trotinetom</div>
+            <div className="dot vs">Vuleta dosao trotinetom</div>
         </div>
         <div>
         <div className="popcorn" onClick={()=>{!data['o1-1'] && hadlePopup('o1-1','popcorn')} }></div>

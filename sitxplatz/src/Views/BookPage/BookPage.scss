@@ -429,9 +429,14 @@ border-color: white transparent transparent transparent;
   background-position:center;
   color: white;
   text-align: center;
+  left: -62px;
 }
 .vuleta-scooter:hover .dot{
   display: block;
+}
+.vuleta-scooter .dot{
+  top: -50px;
+  left: -100px;
 }
 .wc{
   position: relative;
