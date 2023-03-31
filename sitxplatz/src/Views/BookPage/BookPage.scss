@@ -206,6 +206,33 @@ border-color: white transparent transparent transparent;
       }
     }
   }
+  &.homegate {
+    &:hover {
+      .homgejtovaca {
+        display: block;
+      }
+    }
+    .homgejtovaca {
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 0px;
+      width: 200px;
+      height:200px;
+      background-image: url(../../assets/images/homgejtovaca.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      z-index: 999;
+      h2 {
+        color: white;
+        position: absolute;
+        bottom: -75px;
+        right: 10px;
+        font-size: 40px;
+      }
+    }
+  }
 }
 .terasa{
   border-radius: 5px;

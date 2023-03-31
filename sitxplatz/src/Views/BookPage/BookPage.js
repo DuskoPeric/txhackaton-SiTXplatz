@@ -143,8 +143,6 @@ const BookPage = () => {
 
                     </div>
                 </div>
-
-
                 <div className="row">
             <div className="office vertical big5">
               <div className="chair-row long5">
@@ -170,8 +168,11 @@ const BookPage = () => {
                 <div id="o1-18" onClick={()=>{!data['o1-18'] && hadlePopup('o1-18','regular')}} className={`chair  ${data['o1-18']?'reserved':null}`}></div>
               </div>
             </div>
-            <div className="office horizontal wall-left big3">
-              <div className="chair-column long3">
+            <div className="office horizontal wall-left big3 homegate">
+                <div className='homgejtovaca'>
+                    <h2>Ziveli</h2>
+                </div>
+                <div className="chair-column long3">
                 <div className="chair revert-left"></div>
                 <div className="chair revert-right"></div>
                 <div className="chair revert-left"></div>
@@ -462,8 +463,8 @@ const BookPage = () => {
                   <div className="chair revert-right"></div>
               </div>
             </div>
-            <div className="office horizontal wall-left big3">
-              <div className="chair-column long3">
+            <div className="office horizontal wall-left big3" onClick={()=>{hadlePopup('o1-1','rezervisiKanc')}}>
+                <div className="chair-column long3">
                   <div className="chair revert-left"></div>
                   <div className="chair revert-right"></div>
                   <div className="chair revert-left"></div>
@@ -547,7 +548,7 @@ const BookPage = () => {
                 <div className="popup-content">
                     <p className="question">Za stampanje vam je potrebna Vjesna, kontaktirajte Vjesnu</p>
                     <div className="actions">
-                        <a href="tel:0614433840"><button onClick={setReservation} className="accept">Pozovi Vjesnu</button></a>
+                        <a href="tel:0604118298"><button onClick={setReservation} className="accept">Pozovi Vjesnu</button></a>
                         <button onClick={()=>{setOpenPopup(false)}} className="decline">Ne</button>
                     </div>
                 </div>}
@@ -595,6 +596,13 @@ const BookPage = () => {
                     <p className="question">Javi Vuleti da si pozajmio trotinet</p>
                     <div className="actions">
                         <button onClick={()=>{closePopup(false)}} className="accept">M(arni)</button>
+                    </div>
+                </div>}
+            {type==='rezervisiKanc'&&
+                <div className="popup-content">
+                    <p className="question">Za koji tim zelite da bukirate kanc?</p>
+                    <div className="actions">
+                        <button onClick={()=>{closePopup(false)}} className="accept">JobCloud</button>
                     </div>
                 </div>}
         </Popup>
