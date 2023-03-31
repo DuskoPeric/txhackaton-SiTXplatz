@@ -59,7 +59,7 @@ const BookPage = () => {
         setOpenPopup(false)
         setDusko(value)
     }
-    const jeleninePoruke=['clan 32', 'Da, a?', '...', 'Rezervisite parking', 'Vule(ta) dodji vamo', '...', 'Ukinucemo parking']
+    const jeleninePoruke=['Član 32', 'Da, a?', '...', 'Rezervišite parking', 'Vule(ta) dodji vamo', '...', 'Ukinućemo parking']
     const shuffle = useCallback(() => {
         const index = Math.floor(Math.random() * jeleninePoruke.length);
         setDirektorkaMessage(jeleninePoruke[index]);
@@ -170,7 +170,7 @@ const BookPage = () => {
             </div>
             <div className="office horizontal wall-left big3 homegate">
                 <div className='homgejtovaca'>
-                    <h2>Ziveli</h2>
+                    <h2>Živeli</h2>
                 </div>
                 <div className="chair-column long3">
                 <div className="chair revert-left"></div>
@@ -533,7 +533,7 @@ const BookPage = () => {
         >
         {type==='regular'&& 
         <div className="popup-content">
-            <p className="question">Dali zelite da rezervisete ovo mjesto?</p>
+            <p className="question">Da li želite da rezervišete ovo mjesto?</p>
             <div className="actions">
                 <button onClick={setReservation} className="accept">Da</button>
                 <button onClick={()=>{setOpenPopup(false)}} className="decline">Ne</button>
@@ -549,7 +549,7 @@ const BookPage = () => {
                 </div>}
             {type==='vesna'&&
                 <div className="popup-content">
-                    <p className="question">Za stampanje vam je potrebna Vjesna, kontaktirajte Vjesnu</p>
+                    <p className="question">Za štampanje vam je potrebna Vjesna, kontaktirajte Vjesnu</p>
                     <div className="actions">
                         <a href="tel:0604118298"><button onClick={setReservation} className="accept">Pozovi Vjesnu</button></a>
                         <button onClick={()=>{setOpenPopup(false)}} className="decline">Ne</button>
@@ -581,7 +581,7 @@ const BookPage = () => {
                 </div>}
             {type==='parkalot'&&
                 <div className="popup-content">
-                    <p className="question">Stani đe stignes</p>
+                    <p className="question">Stani đe stigneš</p>
                     <div className="actions">
                         <button onClick={()=>{closePopup(false)}} className="accept">Plaky</button>
                     </div>
@@ -589,7 +589,7 @@ const BookPage = () => {
 
             {type==='zalba'&&
                 <div className="popup-content">
-                    <p className="question">Vi ste trenutno 46. u redu za zalbe</p>
+                    <p className="question">Vi ste trenutno 46. u redu za žalbe</p>
                     <div className="actions">
                         <button onClick={()=>{closePopup(false)}} className="accept">Da, a ?</button>
                     </div>
@@ -603,7 +603,7 @@ const BookPage = () => {
                 </div>}
             {type==='rezervisiKanc'&&
                 <div className="popup-content">
-                    <p className="question">Za koji tim zelite da bukirate kanc?</p>
+                    <p className="question">Za koji tim želite da bukirate kanc?</p>
                     <div className="actions">
                         <button onClick={()=>{closePopup(false)}} className="accept">JobCloud</button>
                     </div>
