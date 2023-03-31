@@ -1,6 +1,7 @@
 import "./BookPage.scss";
 import React, { useState, useEffect, useCallback } from 'react';
 import Popup from "../../components/popup/Popup";
+import popup from "../../components/popup/Popup";
 
 const BookPage = () => {
 
@@ -70,6 +71,7 @@ const BookPage = () => {
             let responseJson = await response.json();
             // let cabins = responseJson.cabins;
             setToilets(responseJson);
+            console.log(toilets)
             // return responseJson;
         } catch(error) {
             console.error(error);
@@ -129,15 +131,11 @@ const BookPage = () => {
                     </div>
                 ):null}
 
-        <div className="parkalot" onClick={()=>{hadlePopup('o1-1','parkalot')}}>Book a Parking</div>
-        <div className="parkalot jelena" onClick={()=>{hadlePopup('o1-1','zalba')}}>Complain to Jelena</div>
-        <div className="parkalot jobCloud" onClick={()=>{hadlePopup('o1-1','JobCloud')}}>Book all for JobCloud</div>
+        <div className="parkalot" onClick={()=>{hadlePopup('o1-1','parkalot')}}>Rezerviši parking</div>
+        <div className="parkalot jelena" onClick={()=>{hadlePopup('o1-1','zalba')}}>Žali se Jeleni</div>
+        <div className="parkalot jobCloud" onClick={()=>{hadlePopup('o1-1','JobCloud')}}>Svaki kanc JobCloud-u</div>
             <div className="map-holder">
-
-
-
-
-                <div className="row">
+            <div className="row">
             <div className="office vertical big5">
               <div className="chair-row long5">
                   <div id="o1-1" onClick={()=>{!data['o1-1'] && hadlePopup('o1-1','regular')}} className={`chair revert ${data['o1-1']?'reserved':null}`}></div>
@@ -281,7 +279,12 @@ const BookPage = () => {
               </div>
             </div>
             <div>
-                <div className="wc"><div className="dot">Data for toilet will be done by other team on hackaton</div></div>
+                <div className="wc"><div className="dot">
+                    {toilets.length > 0 ? toilets[0].cabins.map(x => {
+                        return <div> <div className="wc-info"><p>{x?.cabin}</p> <div style={{width: 10, height: 10, borderRadius: 50, marginLeft: 10, backgroundColor: x?.status === "FREE" ? 'green' : 'red'}}></div></div></div>
+                    }) : <div>Ne postoji info</div>}
+                </div>
+                </div>
             </div>
   
           </div>
@@ -388,7 +391,13 @@ const BookPage = () => {
               </div>
             </div>
             <div>
-                <div className="wc lower"><div className="dot">Data for toilet will be done by other team on hackaton</div></div>
+                <div className="wc lower"><div className="dot">
+                    {toilets.length > 0 ? toilets[2].cabins.map(x => {
+                        return <div> <div className="wc-info"><p>{x?.cabin}</p> <div style={{width: 10, height: 10, borderRadius: 50, marginLeft: 10, backgroundColor: x?.status === "FREE" ? 'green' : 'red'}}></div></div></div>
+                    }) : <div>Ne postoji info</div>}
+                </div>
+
+                </div>
             </div>
             <div className="vuleta-scooter" onClick={()=>{hadlePopup('o1-1','scooter')} }>
             <div className="dot vs">Vuleta dosao trotinetom</div>
@@ -397,7 +406,11 @@ const BookPage = () => {
         <div className="popcorn" onClick={()=>{hadlePopup('o1-1','popcorn')} }></div>
     </div>
     <div>
-    <div className="wc small"><div className="dot">Data for toilet will be done by other team on hackaton</div></div>
+    <div className="wc small"><div className="dot">
+        {toilets.length > 0 ? toilets[1].cabins.map(x => {
+            return <div> <div className="wc-info"><p>{x?.cabin}</p> <div style={{width: 10, height: 10, borderRadius: 50, marginLeft: 10, backgroundColor: x?.status === "FREE" ? 'green' : 'red'}}></div></div></div>
+        }) : <div>Ne postoji info</div>}
+    </div></div>
 </div>
             <div>
             <div className="tabletennis" onClick={()=>{hadlePopup('o1-1','tennis')}}>
@@ -607,6 +620,7 @@ const BookPage = () => {
                         <button onClick={()=>{closePopup(false)}} className="accept">JobCloud</button>
                     </div>
                 </div>}
+
         </Popup>
     )}
         </>

@@ -564,6 +564,7 @@ border-color: white transparent transparent transparent;
   text-align: center;
 }
 .wc.lower{
+  color: white;
   margin-left: 150px;
   height: 185px;
 }
@@ -637,8 +638,14 @@ box-shadow: 4px 3px 5px 0px rgba(0,0,0,0.33);
 color: white;
 text-align: center;
 }
+.wc .dot {
+  display: none;
+  align-items:center;
+  justify-content: space-around;
+  font-size: 16px;
+}
 .wc:hover .dot{
-  display: block;
+  display: flex;
 }
 .office:hover .nametag{
   display: block;
@@ -725,6 +732,9 @@ position: absolute;
   &.jobCloud {
     top: 220px;
   }
+  &.toilet {
+    top: 320px;
+  }
   &:hover {
     background-position: 100% 0;
     moz-transition: all .4s ease-in-out;
@@ -732,4 +742,9 @@ position: absolute;
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
   }
+}
+
+.wc-info {
+  display: flex;
+  align-items: center;
 }
