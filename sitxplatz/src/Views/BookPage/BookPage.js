@@ -321,6 +321,9 @@ const BookPage = () => {
             <div>
                 <div className="printer" onClick={()=>{hadlePopup('o1-1','vesna')}}></div>
             </div>
+            <div>
+            <div className="ps5"></div>
+        </div>
           </div>
           <div className="row">
             <div className="office vertical big4 wall-top">
