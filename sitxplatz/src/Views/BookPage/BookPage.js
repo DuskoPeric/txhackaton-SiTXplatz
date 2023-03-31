@@ -91,6 +91,12 @@ const BookPage = () => {
     return (
         <>
         <div className="main-container">
+        {openDusko ?
+            (<div className="dusko">
+                <h2>ĐE ĆEŠ BA NA PORAZ</h2>
+                <div className="slika"></div>
+                <div className="kapituliraj" onClick={()=>{handleDusko(false)}}>Kapituliraj</div>
+            </div>):null}
         <div className="parkalot" onClick={()=>{hadlePopup('o1-1','parkalot')}}>Book a Parking</div>
         <div className="parkalot jelena" onClick={()=>{hadlePopup('o1-1','zalba')}}>Complain to Jelena</div>
         <div className="parkalot jobCloud" onClick={()=>{hadlePopup('o1-1','JobCloud')}}>Book all for JobCloud</div>
@@ -104,12 +110,6 @@ const BookPage = () => {
                         </div>
                     ):null}
 
-                {openDusko ?
-                    (<div className="dusko">
-                        <h2>ĐE ĆEŠ BA NA PORAZ</h2>
-                        <div className="slika"></div>
-                        <div className="kapituliraj" onClick={()=>{handleDusko(false)}}>Kapituliraj</div>
-                    </div>):null}
 
                 <div style={{left: coords.x, top: coords.y}} className="direktorka">
 
@@ -330,9 +330,6 @@ const BookPage = () => {
               </div>
             </div>
             <div>
-            <div className="vuleta-scooter" onClick={()=>{!data['o1-1'] && hadlePopup('o1-1','scooter')} }>
-                <div className="dot">Vuleta dosao trotinetom</div>
-            </div>
         </div>
             <div>
             <div className="popcorn" onClick={()=>{!data['o1-1'] && hadlePopup('o1-1','popcorn')} }></div>
@@ -368,6 +365,15 @@ const BookPage = () => {
             <div>
                 <div className="wc lower"><div className="dot">Data for toilet will be done by other team on hackaton</div></div>
             </div>
+            <div className="vuleta-scooter" onClick={()=>{!data['o1-1'] && hadlePopup('o1-1','scooter')} }>
+            <div className="dot">Vuleta dosao trotinetom</div>
+        </div>
+        <div>
+        <div className="popcorn" onClick={()=>{!data['o1-1'] && hadlePopup('o1-1','popcorn')} }></div>
+    </div>
+    <div>
+    <div className="wc small"><div className="dot">Data for toilet will be done by other team on hackaton</div></div>
+</div>
             <div>
             <div className="tabletennis" onClick={()=>{!data['o1-1'] && hadlePopup('o1-1','tennis')}}>
 

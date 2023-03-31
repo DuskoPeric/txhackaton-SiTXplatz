@@ -369,12 +369,12 @@ border-color: white transparent transparent transparent;
 .tabletennis{
   display: flex;
   justify-content: space-around;
-  height: 170px;
+  height: 116px;
   align-items: center;
   background: #4d8cbd;
-  width: 270px;
+  width: 213px;
   margin-top: 8px;
-  margin-left: 932px;
+  margin-left: 337px;
   border-radius: 5px;
   font-size: 12px;
   background-image: url(../../assets/images/table-tennis.png);
@@ -382,7 +382,7 @@ border-color: white transparent transparent transparent;
   background-repeat: no-repeat;
   background-position:center;
   position: relative;
-  top:67px;
+  top:17px;
 }
 .vuleta-scooter{
   position: relative;
@@ -393,7 +393,7 @@ border-color: white transparent transparent transparent;
   background: #4d8cbd;
   width: 70px;
   margin-top: 8px;
-  margin-left: 762px;
+  margin-left: 262px;
   border-radius: 5px;
   font-size: 12px;
   background-image: url(../../assets/images/scooter.png);
@@ -428,6 +428,11 @@ border-color: white transparent transparent transparent;
 .wc.lower{
   margin-left: 150px;
   height: 185px;
+}
+.wc.small{
+  left: 550px;
+  height: 60px;
+  top: 145px;
 }
 .chair-column{
   position: relative;
