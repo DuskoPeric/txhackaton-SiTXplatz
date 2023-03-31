@@ -296,6 +296,9 @@ const BookPage = () => {
             <div>
                 <div className="wc lower"><div className="dot">Data for toilet will be done by other team on hackaton</div></div>
             </div>
+            <div>
+            <div className="tabletennis"></div>
+        </div>
           </div>
           <div className="row bottom2">
             <div className="office vertical big5 wall-top">
