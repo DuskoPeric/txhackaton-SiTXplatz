@@ -72,7 +72,8 @@ body{
     background-position: center;
     background-size: contain;
     .poruka {
-      top: -40px;
+      position: relative;
+      top: -20px;
       left: -40px;
       color: white;
       letter-spacing: 1px;
@@ -281,6 +282,13 @@ body{
     background-image: url('../../assets/images/aleksandra.png');
     background-size: cover;
     cursor: pointer;
+    transition: all 0.5s;
+
+    &:hover {
+      width: 50px;
+      height: 50px;
+      transition: all 0.5s;
+    }
   }
 }
 .terasa2{
