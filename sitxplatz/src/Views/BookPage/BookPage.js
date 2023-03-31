@@ -8,7 +8,6 @@ const BookPage = () => {
     const [openJobCloud, setOpenJobCloud] = useState(false);
     const [openDusko, setDusko] = useState(false);
     const [direktorkaMessage, setDirektorkaMessage] = useState('');
-    const [direktorkaMessageShow, setDirektorkaMessageShow] = useState(false);
     const [coords, setCoords] = useState({x: 0, y: 0});
     const [type, setType] = useState(null);
     const [chair, setChair] = useState(null);
@@ -92,8 +91,8 @@ const BookPage = () => {
     return (
         <>
         <div className="main-container">
-        <div className="parkalot">Book a Parking</div>
-        <div className="parkalot jelena">Complain to Jelena</div>
+        <div className="parkalot" onClick={()=>{hadlePopup('o1-1','parkalot')}}>Book a Parking</div>
+        <div className="parkalot jelena" onClick={()=>{hadlePopup('o1-1','zalba')}}>Complain to Jelena</div>
         <div className="parkalot jobCloud" onClick={()=>{hadlePopup('o1-1','JobCloud')}}>Book all for JobCloud</div>
             <div className="map-holder">
                 {openJobCloud ?
@@ -331,7 +330,9 @@ const BookPage = () => {
               </div>
             </div>
             <div>
-            <div className="vuleta-scooter"></div>
+            <div className="vuleta-scooter" onClick={()=>{!data['o1-1'] && hadlePopup('o1-1','scooter')} }>
+                <div className="dot">Vuleta dosao trotinetom</div>
+            </div>
         </div>
             <div>
             <div className="popcorn" onClick={()=>{!data['o1-1'] && hadlePopup('o1-1','popcorn')} }></div>
@@ -482,7 +483,8 @@ const BookPage = () => {
             </div>
           </div>
           <div>
-          <div class="terasa2"></div>
+          <div class="terasa2">
+          </div>
           </div>
           </div>
         </div>
@@ -539,6 +541,28 @@ const BookPage = () => {
                     <div className="actions">
                         <button onClick={()=>{closePopup(false)}} className="accept">Kokaj</button>
                         <button onClick={()=>{setOpenPopup(false)}} className="decline">Ne</button>
+                    </div>
+                </div>}
+            {type==='parkalot'&&
+                <div className="popup-content">
+                    <p className="question">Stani đe stignes</p>
+                    <div className="actions">
+                        <button onClick={()=>{closePopup(false)}} className="accept">Plaky</button>
+                    </div>
+                </div>}
+
+            {type==='zalba'&&
+                <div className="popup-content">
+                    <p className="question">Vi ste trenutno 46. u redu za zalbe</p>
+                    <div className="actions">
+                        <button onClick={()=>{closePopup(false)}} className="accept">Da, a ?</button>
+                    </div>
+                </div>}
+            {type==='scooter'&&
+                <div className="popup-content">
+                    <p className="question">Javi Vuleti da si pozajmio trotinet</p>
+                    <div className="actions">
+                        <button onClick={()=>{closePopup(false)}} className="accept">M(arni)</button>
                     </div>
                 </div>}
         </Popup>

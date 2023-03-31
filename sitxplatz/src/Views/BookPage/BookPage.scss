@@ -307,6 +307,13 @@ border-color: white transparent transparent transparent;
     background-image: url('../../assets/images/aleksandra.png');
     background-size: cover;
     cursor: pointer;
+    transition: all 0.5s;
+
+    &:hover {
+      width: 50px;
+      height: 50px;
+      transition: all 0.5s;
+    }
   }
 }
 .terasa2{
@@ -378,6 +385,7 @@ border-color: white transparent transparent transparent;
   top:67px;
 }
 .vuleta-scooter{
+  position: relative;
   display: flex;
   justify-content: space-around;
   height: 70px;
@@ -392,6 +400,11 @@ border-color: white transparent transparent transparent;
   background-size: 35%;
   background-repeat: no-repeat;
   background-position:center;
+  color: white;
+  text-align: center;
+}
+.vuleta-scooter:hover .dot{
+  display: block;
 }
 .wc{
   position: relative;
