@@ -178,6 +178,38 @@ body{
   background-repeat: no-repeat;
   background-position:center;
 }
+.popcorn{
+  display: flex;
+  justify-content: space-around;
+  height: 70px;
+  align-items: center;
+  background: #4d8cbd;
+  width: 70px;
+  margin-top: 88px;
+  margin-left: 32px;
+  border-radius: 5px;
+  font-size: 12px;
+  background-image: url(../../assets/images/pop-corn.png);
+  background-size: 35%;
+  background-repeat: no-repeat;
+  background-position:center;
+}
+.vuleta-scooter{
+  display: flex;
+  justify-content: space-around;
+  height: 70px;
+  align-items: center;
+  background: #4d8cbd;
+  width: 70px;
+  margin-top: 8px;
+  margin-left: 762px;
+  border-radius: 5px;
+  font-size: 12px;
+  background-image: url(../../assets/images/scooter.png);
+  background-size: 35%;
+  background-repeat: no-repeat;
+  background-position:center;
+}
 .wc{
   position: relative;
   display: flex;

@@ -259,6 +259,12 @@ const BookPage = () => {
                 <div className="chair"></div>
               </div>
             </div>
+            <div>
+            <div className="vuleta-scooter"></div>
+        </div>
+            <div>
+            <div className="popcorn"></div>
+        </div>
           </div>
           <div className="row">
             <div className="office vertical big5 wall-top">
