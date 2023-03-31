@@ -330,7 +330,9 @@ const BookPage = () => {
               </div>
             </div>
             <div>
-            <div className="vuleta-scooter"></div>
+            <div className="vuleta-scooter" onClick={()=>{!data['o1-1'] && hadlePopup('o1-1','scooter')} }>
+                <div className="dot">Vuleta dosao trotinetom</div>
+            </div>
         </div>
             <div>
             <div className="popcorn" onClick={()=>{!data['o1-1'] && hadlePopup('o1-1','popcorn')} }></div>
@@ -554,6 +556,13 @@ const BookPage = () => {
                     <p className="question">Vi ste trenutno 46. u redu za zalbe</p>
                     <div className="actions">
                         <button onClick={()=>{closePopup(false)}} className="accept">Da, a ?</button>
+                    </div>
+                </div>}
+            {type==='scooter'&&
+                <div className="popup-content">
+                    <p className="question">Javi Vuleti da si pozajmio trotinet</p>
+                    <div className="actions">
+                        <button onClick={()=>{closePopup(false)}} className="accept">M(arni)</button>
                     </div>
                 </div>}
         </Popup>
