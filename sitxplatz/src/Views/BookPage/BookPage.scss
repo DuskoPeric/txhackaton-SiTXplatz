@@ -438,6 +438,25 @@ border-color: white transparent transparent transparent;
   background-position:center;
   cursor: pointer;
 }
+.ps5{
+  position: relative;
+  top:40px; 
+  display: flex;
+  justify-content: space-around;
+  height: 70px;
+  align-items: center;
+  background: #4d8cbd;
+  width: 70px;
+  margin-top: 148px;
+  margin-left: 362px;
+  border-radius: 5px;
+  font-size: 12px;
+  background-image: url('../../assets/images/ps.png');
+  background-size: 35%;
+  background-repeat: no-repeat;
+  background-position:center;
+  cursor: pointer;
+}
 .popcorn{
   display: flex;
   justify-content: space-around;
