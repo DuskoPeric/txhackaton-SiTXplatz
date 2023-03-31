@@ -250,6 +250,56 @@ body{
   background-position:center;
   cursor: pointer;
 }
+.popcorn{
+  display: flex;
+  justify-content: space-around;
+  height: 70px;
+  align-items: center;
+  background: #4d8cbd;
+  width: 70px;
+  margin-top: 88px;
+  margin-left: 32px;
+  border-radius: 5px;
+  font-size: 12px;
+  background-image: url(../../assets/images/pop-corn.png);
+  background-size: 35%;
+  background-repeat: no-repeat;
+  background-position:center;
+}
+.tabletennis{
+  display: flex;
+  justify-content: space-around;
+  height: 170px;
+  align-items: center;
+  background: #4d8cbd;
+  width: 270px;
+  margin-top: 8px;
+  margin-left: 932px;
+  border-radius: 5px;
+  font-size: 12px;
+  background-image: url(../../assets/images/table-tennis.png);
+  background-size: 25%;
+  background-repeat: no-repeat;
+  background-position:center;
+  position: relative;
+  top:67px;
+}
+.vuleta-scooter{
+  display: flex;
+  justify-content: space-around;
+  height: 70px;
+  align-items: center;
+  background: #4d8cbd;
+  width: 70px;
+  margin-top: 8px;
+  margin-left: 762px;
+  border-radius: 5px;
+  font-size: 12px;
+  background-image: url(../../assets/images/scooter.png);
+  background-size: 35%;
+  background-repeat: no-repeat;
+  background-position:center;
+}
 .wc{
   position: relative;
   display: flex;
